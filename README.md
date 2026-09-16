@@ -4,17 +4,28 @@ Kestrel is a premium, safety-aware Solana market intelligence interface. This fi
 
 ## Run locally
 
-This is a static web app. From the repository root:
+This is a Vite + React web app. From the repository root:
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:4173`.
+Then visit the local Vite URL shown in the terminal.
+
+For a production verification build:
+
+```bash
+npm run build
+```
 
 ## DexScreener data
 
-`src/app.js` queries the public DexScreener search API for Solana pairs. It includes clearly labeled sample-data fallback handling for offline, rate-limited, or unavailable API situations. The API is used only for discovery/display in this build; it does not submit trades.
+`src/App.jsx` queries the public DexScreener search API for Solana pairs. It includes clearly labeled sample-data fallback handling for offline, rate-limited, or unavailable API situations. The API is used only for discovery/display in this build; it does not submit trades.
+
+## Motion components
+
+The React implementation adds the supplied Originkit-inspired `RoundCarousel` and `AppearText` components. Both are local components, and the carousel plus text animation respect reduced-motion preferences.
 
 ## Trading and KYC
 

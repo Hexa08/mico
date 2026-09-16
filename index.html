@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
+    <div id="root"></div>
+    <!-- Legacy static markup is retained below for the design reference. -->
+    <template id="legacy-kestrel-markup">
     <div class="grain" aria-hidden="true"></div>
     <header class="topbar">
       <a class="brand" href="#top" aria-label="Kestrel home"><span class="brand-mark">K</span><span>Kestrel</span></a>
@@ -57,6 +59,7 @@
 
     <dialog class="trade-dialog" id="tradeDialog"><form method="dialog" class="trade-panel"><div class="trade-top"><div><p class="eyebrow"><span></span> Trade preview</p><h3>Buy or sell with context.</h3></div><button class="modal-close" value="cancel" aria-label="Close trade preview">×</button></div><div class="trade-notice"><b>Preview only</b><span>Wallet execution and KYC verification are connected in the next secure integration phase.</span></div><div class="trade-tabs" role="tablist"><button class="active" type="button" data-side="buy">Buy</button><button type="button" data-side="sell">Sell</button></div><label>Pay<input id="tradeAmount" inputmode="decimal" placeholder="0.00" value="1" /><span class="asset-label">SOL</span></label><div class="trade-pcts"><button type="button">25%</button><button type="button">50%</button><button type="button">75%</button><button type="button">Max</button></div><label>Receive<input id="tradeReceive" readonly value="Select an asset" /><span class="asset-label" id="receiveSymbol">—</span></label><div class="trade-meta"><p><span>Safety state</span><b class="badge caution" id="tradeRisk">Review required</b></p><p><span>Estimated network fee</span><b>—</b></p><p><span>Price impact</span><b>—</b></p></div><button class="button button-lime full" type="button" id="connectWallet">Connect wallet to continue <span>→</span></button><small class="trade-disclaimer">Trading involves risk. Market data comes from DexScreener where available and does not constitute investment advice.</small></form></dialog>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="src/app.js"></script>
+    </template>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
