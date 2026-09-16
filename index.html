@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f4ee" />
+    <meta name="description" content="Kestrel — considered Solana market intelligence." />
+    <title>Kestrel — Solana intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Legacy static markup is retained below for the design reference. -->
+    <template id="legacy-kestrel-markup">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Kestrel home"><span class="brand-mark">K</span><span>Kestrel</span></a>
+      <nav aria-label="Main navigation"><a class="active" href="#desk">Desk</a><a href="#scanner">Scanner</a><a href="#safety">Safety</a><a href="#pricing">Pricing</a></nav>
+      <div class="header-actions"><button class="text-button" id="signIn">Sign in</button><button class="button button-dark" id="launchDesk">Launch desk <span>↗</span></button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Solana market intelligence</p>
+          <h1>Trade the momentum.<br /><em>Leave the noise behind.</em></h1>
+          <p class="lede">A calmer way to discover, evaluate, and follow Solana opportunities—with safety context built into every move.</p>
+          <div class="hero-actions"><button class="button button-lime" data-open-trade>Start exploring <span>→</span></button><a class="play" href="#how"><span>▶</span> See how it works</a></div>
+          <div class="people"><div class="faces"><i>J</i><i>S</i><i>M</i><i>R</i></div><p>Built for <b>thoughtful traders</b></p></div>
+        </div>
+        <div class="hero-art" aria-label="Abstract Kestrel visual"><div class="sun"></div><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-star">✦</div><div class="art-label">LESS RISK.<br />MORE CLARITY.</div><div class="art-note">SOLANA<br />INTELLIGENCE</div></div>
+      </section>
+
+      <section class="ticker" aria-label="Market status"><span>MARKET PULSE</span><b id="solPrice">◎ SOL <i>Loading…</i></b><b id="solChange">24h movement <i>—</i></b><b id="pairCount">Pairs monitored <i>—</i></b><span class="status" id="apiStatus"><i></i> Connecting to DexScreener</span></section>
+
+      <section class="intro" id="desk"><p class="eyebrow"><span></span> A better trading desk</p><h2>Everything you need to act<br />with <em>conviction.</em></h2><p>One considered workspace for the moments that matter. No clutter, no hype—just the context to make your next decision a better one.</p></section>
+
+      <section class="desk-shell" aria-label="Kestrel desk preview">
+        <aside class="sidebar"><p class="desk-logo"><span class="brand-mark">K</span></p><button class="nav-active">⌂ <span>Overview</span></button><button>⌁ <span>Scanner</span></button><button>◈ <span>Watchlist</span></button><button>◌ <span>Activity</span></button><div class="nav-spacer"></div><button>⚙ <span>Settings</span></button><div class="user"><b>EA</b><span>Emily Adams<small>Verified account</small></span><i>⌄</i></div></aside>
+        <article class="desk-main"><div class="desk-top"><div><p class="muted">Good afternoon, Emily</p><h3>Your market, at a glance.</h3></div><button class="icon-button" aria-label="Notifications">♢<i></i></button></div>
+          <div class="stats"><div><p>Tracked value</p><strong>$24,891.20</strong><small class="up">↗ 12.4% <span>this month</span></small></div><div><p>Today’s movement</p><strong class="green">+$1,284.62</strong><small class="up">↗ 5.43% <span>vs. yesterday</span></small></div><div><p>Risk posture</p><strong>Measured <b class="risk-dot"></b></strong><small><span>Across your watchlist</span></small></div></div>
+          <div class="chart-card"><div class="card-head"><div><p class="card-label">TRACKED ASSET PERFORMANCE</p><h4>$24,891.20 <i class="up">+12.4%</i></h4></div><div class="periods"><button class="active">1M</button><button>3M</button><button>1Y</button><button>All</button></div></div><svg viewBox="0 0 800 180" preserveAspectRatio="none" aria-label="Rising tracked asset chart"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#c9f54a" stop-opacity=".34"/><stop offset="1" stop-color="#c9f54a" stop-opacity="0"/></linearGradient></defs><path class="grid" d="M0 35H800M0 85H800M0 135H800"/><path class="chart-fill" d="M0 147 C37 141 51 145 84 128 S131 136 164 112 S216 124 251 104 S291 111 324 89 S370 111 410 88 S460 92 488 71 S532 87 567 58 S620 75 654 49 S712 55 748 25 S780 34 800 18 V180 H0Z"/><path class="chart-line" d="M0 147 C37 141 51 145 84 128 S131 136 164 112 S216 124 251 104 S291 111 324 89 S370 111 410 88 S460 92 488 71 S532 87 567 58 S620 75 654 49 S712 55 748 25 S780 34 800 18"/></svg><div class="months"><span>01 Jun</span><span>08 Jun</span><span>15 Jun</span><span>22 Jun</span><span>29 Jun</span></div></div>
+        </article>
+        <section class="watch"><div class="watch-head"><div><p class="card-label">WATCHLIST</p><h4>On your radar</h4></div><button class="more" aria-label="More watchlist options">•••</button></div><div id="watchlist" class="watchlist"><p class="loading">Loading live pairs…</p></div><button class="view-all" id="viewScanner">View scanner <span>→</span></button><div class="brief"><p class="card-label">YOUR DAILY BRIEF</p><h4>A clear read on today’s market.</h4><p>Signals, shifts, and opportunities worth a closer look.</p><button>Read the brief <span>→</span></button></div></section>
+      </section>
+
+      <section class="scanner-section" id="scanner"><div class="scanner-copy"><p class="eyebrow"><span></span> Intelligence, not impulse</p><h2>See what’s moving<br />before everyone else.</h2><p>Our scanner surfaces momentum with context—so you can spend less time filtering and more time thinking.</p><ul><li><b>01</b><span><strong>Signal over noise</strong>Multi-factor momentum, not vanity metrics.</span></li><li><b>02</b><span><strong>Safety in the frame</strong>Risk flags appear beside every opportunity.</span></li><li><b>03</b><span><strong>Your rules, applied</strong>Save filters that match how you trade.</span></li></ul><button class="button button-dark" id="openScanner">Explore the scanner <span>→</span></button></div>
+        <div class="scanner-card"><div class="scanner-head"><div><b>⌁</b><span>Market Scanner<small id="scannerFreshness">Starting data connection…</small></span></div><button id="filterButton">Filters <i>3</i></button></div><div class="filter-row"><button class="selected">All</button><button>Trending</button><button>New pairs</button><button>Screened</button></div><div class="scan-row scan-label"><span>Asset</span><span>Price</span><span>24h</span><span>Safety</span></div><div id="scannerRows"><p class="loading">Loading Solana pairs…</p></div><button class="scanner-more" id="refreshScanner">Refresh market data <span>↻</span></button></div>
+      </section>
+
+      <section class="safety" id="safety"><div class="safety-art"><div class="shield">✦</div><div class="orbit a"></div><div class="orbit b"></div><span class="safe-tag left">MINT CHECKED</span><span class="safe-tag right">RISK SCREENED</span></div><div><p class="eyebrow"><span></span> Safety is a feature</p><h2>Built for the part<br />no one talks about.</h2><p>Crypto moves fast. Kestrel helps you slow down just enough to see the risks hiding in plain sight.</p><div class="safety-grid"><div><b>◈</b><h4>Risk signals</h4><p>Context for ownership, authority, concentration, and suspicious activity patterns.</p></div><div><b>⌘</b><h4>Account integrity</h4><p>Repeated harmful activity can trigger review and proportionate restrictions.</p></div><div><b>✓</b><h4>Clear status</h4><p>Know what has been checked—and what still needs your judgment.</p></div><div><b>◌</b><h4>Human review</h4><p>High-risk reports are investigated, documented, and appealable.</p></div></div><a href="#policies">Read our safety standards <span>→</span></a></div></section>
+
+      <section class="statement" id="how"><p>Made for people who<br />want to trade <em>better.</em></p><button class="button button-lime" data-open-trade>Open the trade preview <span>→</span></button></section>
+      <section class="pricing" id="pricing"><p class="eyebrow"><span></span> Simple, honest pricing</p><h2>Start where you are.</h2><div class="plans"><article><p>Explorer</p><h3>Free</h3><span>For getting a feel for the market.</span><ul><li>Market overview</li><li>3 saved watchlist assets</li><li>Daily market brief</li></ul><button>Start exploring</button></article><article class="featured"><i>Most popular</i><p>Observer</p><h3>$19 <small>/ month</small></h3><span>For traders who want more context.</span><ul><li>Full market scanner</li><li>Unlimited watchlists</li><li>Real-time eligible signals</li><li>Priority support</li></ul><button class="button button-lime">Choose Observer <span>→</span></button></article><article><p>Partner</p><h3>Let’s talk</h3><span>For teams and trading communities.</span><ul><li>Everything in Observer</li><li>Team workspace</li><li>Custom alerts</li></ul><button>Contact us</button></article></div></section>
+    </main>
+    <footer id="policies"><div class="footer-top"><a class="brand" href="#top"><span class="brand-mark">K</span><span>Kestrel</span></a><p>Quiet confidence for the<br />Solana market.</p><button class="button button-dark" data-open-trade>Start exploring <span>→</span></button></div><div class="footer-links"><div><p>PRODUCT</p><a href="#desk">Desk</a><a href="#scanner">Scanner</a><a href="#safety">Safety</a><a href="#pricing">Pricing</a></div><div><p>COMPANY</p><a href="mailto:hello@kestrel.example">Contact</a><a href="#safety">Security</a><a href="#policies">Status</a><a href="#policies">Changelog</a></div><div><p>LEGAL</p><a href="#policies">Terms of use</a><a href="#policies">Privacy policy</a><a href="#policies">Risk disclosure</a><a href="#policies">Safety standards</a></div><div class="newsletter"><p>A clear signal, once a week.</p><form id="newsletter"><input type="email" required placeholder="Your email address" aria-label="Email address" /><button aria-label="Subscribe">→</button></form><small>No noise. Unsubscribe anytime.</small></div></div><div class="footer-bottom"><span>© 2026 Kestrel Labs, Inc.</span><span class="solana">◎ Built for the Solana ecosystem</span><span>Privacy-first by design</span></div></footer>
+
+    <dialog class="trade-dialog" id="tradeDialog"><form method="dialog" class="trade-panel"><div class="trade-top"><div><p class="eyebrow"><span></span> Trade preview</p><h3>Buy or sell with context.</h3></div><button class="modal-close" value="cancel" aria-label="Close trade preview">×</button></div><div class="trade-notice"><b>Preview only</b><span>Wallet execution and KYC verification are connected in the next secure integration phase.</span></div><div class="trade-tabs" role="tablist"><button class="active" type="button" data-side="buy">Buy</button><button type="button" data-side="sell">Sell</button></div><label>Pay<input id="tradeAmount" inputmode="decimal" placeholder="0.00" value="1" /><span class="asset-label">SOL</span></label><div class="trade-pcts"><button type="button">25%</button><button type="button">50%</button><button type="button">75%</button><button type="button">Max</button></div><label>Receive<input id="tradeReceive" readonly value="Select an asset" /><span class="asset-label" id="receiveSymbol">—</span></label><div class="trade-meta"><p><span>Safety state</span><b class="badge caution" id="tradeRisk">Review required</b></p><p><span>Estimated network fee</span><b>—</b></p><p><span>Price impact</span><b>—</b></p></div><button class="button button-lime full" type="button" id="connectWallet">Connect wallet to continue <span>→</span></button><small class="trade-disclaimer">Trading involves risk. Market data comes from DexScreener where available and does not constitute investment advice.</small></form></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </template>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
